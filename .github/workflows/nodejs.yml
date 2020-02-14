@@ -18,6 +18,14 @@ jobs:
     - run: npm run compile --if-present
     - run: npm run test:all
     - run: npm publish --access public
+    - name: Publish to npm if version has been updated
+      uses: pascalgn/npm-publish-action@1.1.0
+      with:
+        tag_name: "v%s"
+        tag_message: "v%s"
+        commit_pattern: "^Release (\\S+)"
+      
     env:
       NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       CI: true

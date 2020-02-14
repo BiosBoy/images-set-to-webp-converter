@@ -7,7 +7,7 @@
   ![logo_image](https://raw.githubusercontent.com/BiosBoy/images-set-to-webp-converter/master/web-converter_logo.jpg)
 
 
-### The easist way to check webp support in any browser!
+### The easist way to convert a bunch of .jpg, .png, etc images to webp!
 Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
 
 

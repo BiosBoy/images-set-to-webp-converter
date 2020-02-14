@@ -8,7 +8,7 @@
 
 
 
-![logo_image](https://raw.githubusercontent.com/BiosBoy/webp-checker/master/web-checker_logo.jpg)
+![logo_image](https://raw.githubusercontent.com/BiosBoy/webp-checker/master/web-converter_logo.jpg)
 
 **How to use:**
   - Prepare:

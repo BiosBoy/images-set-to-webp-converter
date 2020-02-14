@@ -13,7 +13,7 @@ module.exports = {
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   testPathIgnorePatterns: ['/node_modules/', '/__tests__/mocks/.*'],
   coveragePathIgnorePatterns: ['typings.d.ts'],
-  transformIgnorePatterns: ['.*(node_modules)(?!.*torn.*).*$'],
+  transformIgnorePatterns: ['.*(node_modules).*$'],
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest'

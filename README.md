@@ -33,7 +33,7 @@ Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
 3. Run `images-set-to-webp-converter` util in a way like:
      `node images-set-to-webp-converter /Desktop/IMGSet`
 
-4. Grab you **.webp** right on here:
+4. Grab your **.webp** right on here:
 
           Desktop --- |
                       |
@@ -50,7 +50,7 @@ Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
                                                              | --- img@4x.webp <--
                                                              | --- img@2x.webp <--
 
-**And that's all! See how it easy? So we can convert various images produced by Adobe IPP in the WEBP format without any tears!**
+**And that's all! See how it's easy? So we can convert various images produced by Adobe IPP in the .WEBP format without any tears or routine!**
 
 # FAQ:
 

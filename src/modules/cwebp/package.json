@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      "cwebp@2.0.5",
+      "/Users/sviatoslav/Desktop/CWEP"
+    ]
+  ],
+  "_from": "cwebp@2.0.5",
+  "_id": "cwebp@2.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-On5WiyO8zJK/MnyyylgrIwJFiGBayZnuKcqMSqNe/4Zz29tQv6zGqe+1Ibbe5y/jFf3wqdYEH9Pond9BgvEPxA==",
+  "_location": "/cwebp",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cwebp@2.0.5",
+    "name": "cwebp",
+    "escapedName": "cwebp",
+    "rawSpec": "2.0.5",
+    "saveSpec": null,
+    "fetchSpec": "2.0.5"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cwebp/-/cwebp-2.0.5.tgz",
+  "_spec": "2.0.5",
+  "_where": "/Users/sviatoslav/Desktop/CWEP",
+  "author": {
+    "name": "Leonid Beschastny",
+    "email": "lbeschastny@iknow.travel"
+  },
+  "bugs": {
+    "url": "https://github.com/Intervox/node-webp/issues"
+  },
+  "dependencies": {
+    "raw-body": "2",
+    "through": "~2.3",
+    "when": "3"
+  },
+  "description": "node.js wrapper for cwebp and dwebp binaries from WebP image processing utility",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "minimist": "^1.2.0",
+    "mocha": "^3.5.0",
+    "mock-spawn": "^0.2.5",
+    "should": "^12.0.0",
+    "stream-buffers": "2.1.0"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "homepage": "https://github.com/Intervox/node-webp#readme",
+  "keywords": [
+    "webp",
+    "compress",
+    "minify",
+    "optimize",
+    "img",
+    "image"
+  ],
+  "main": "lib/index.js",
+  "name": "cwebp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Intervox/node-webp.git"
+  },
+  "scripts": {
+    "clean": "rm -rf lib/ cwebp-*.tgz",
+    "list-files": "tar -tzf `npm pack | tail -n 1`",
+    "postpublish": "git push origin +HEAD:latest --follow-tags",
+    "prepublish": "npm run clean && coffee -o lib/ -cb src/",
+    "test": "mocha test/*.coffee"
+  },
+  "version": "2.0.5"
+}

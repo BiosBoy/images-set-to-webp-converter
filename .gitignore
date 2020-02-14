@@ -1,0 +1,13 @@
+*.log
+node_modules
+dist
+coverage
+dist
+sftp-config.json
+.idea
+.ftpconfig
+credentials.js
+package-lock.json
+.vscode
+.tmp
+.src

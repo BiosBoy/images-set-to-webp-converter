@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
+    "types": ["node", "jest", "webpack-env"],
+    "lib": ["dom", "es6", "es2017", "es2018", "esnext"]
+  },
+  "typeAcquisition": {
+    "enable": true
+  },
+  "files": [
+    "./typings.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "dist"
+  ]
+}

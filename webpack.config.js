@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const debug = require('debug')('app:webpack::config')
 
 // ------------------------------------
@@ -21,24 +21,23 @@ const fileLoadersRules = [
   }
 ]
 
-// ------------------------------------
-// Optimization
-// ------------------------------------
-const compOptimization = {
-  minimizer: [
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-          unused: true,
-          dead_code: true,
-          warnings: false
-        }
-      },
-      sourceMap: false
-    })
-  ]
-}
-
+// // ------------------------------------
+// // Optimization
+// // ------------------------------------
+// const compOptimization = {
+//   minimizer: [
+//     new UglifyJsPlugin({
+//       uglifyOptions: {
+//         compress: {
+//           unused: true,
+//           dead_code: true,
+//           warnings: false
+//         }
+//       },
+//       sourceMap: false
+//     })
+//   ]
+// }
 
 // // ------------------------------------
 // // Bundle externals
@@ -48,12 +47,10 @@ const compOptimization = {
 //   cwebp: 'cwebp'
 // }
 
-
 const createConfig = () => {
   debug('\x1b[36m', '=== Prepearing Webpack to work... ===')
 
   const webpackConfig = {
-    // optimization: compOptimization,
     mode: 'development',
     entry: {
       app: path.resolve(__dirname, 'src/index.ts')
@@ -61,15 +58,13 @@ const createConfig = () => {
     // externals: externalBundles,
     target: 'node',
     output: {
-      filename: 'imagesToWebP.js',
-      path: path.resolve(__dirname, 'public')
+      filename: 'lib-min.js',
+      path: path.resolve(__dirname, 'lib')
     },
     module: {
       rules: fileLoadersRules
     },
-    plugins: [
-      new webpack.IgnorePlugin(/vertx/)
-    ],
+    plugins: [new webpack.IgnorePlugin(/vertx/)],
     resolve: {
       modules: ['node_modules'],
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']

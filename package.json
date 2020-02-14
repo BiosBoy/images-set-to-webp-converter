@@ -38,20 +38,21 @@
     "*.@(js|jsx)": [
       "prettier --write",
       "eslint --fix --quiet",
-      "git add",
       "jest --bail --findRelatedTests"
     ],
     "*.@(ts|tsx)": [
       "prettier --write --parser typescript",
       "tslint --fix -c tslint.json",
-      "git add",
       "jest --bail --findRelatedTests"
     ]
   },
   "scripts": {
     "run:dev": "node ./src/index.ts",
     "run:prod": "node ./lib/lib-min.js",
-    "test:all": "jest --config jest.config.js"
+    "lint:staged": "lint-staged",
+    "test:all": "jest --config jest.config.js",
+    "compile": "npx webpack",
+    "build": "lint-staged && compile"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -60,13 +61,15 @@
     "@types/webpack-dev-middleware": "^2.0.2",
     "@types/webpack-env": "^1.14.0",
     "@types/webpack-hot-middleware": "^2.16.4",
+    "better-npm-run": "^0.1.1",
     "debug": "^4.1.1",
-    "eslint": "^6.0.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^22.10.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-promise": "^4.2.1",
@@ -75,7 +78,8 @@
     "husky": "^4.2.3",
     "jest": "^24.8.0",
     "json-lint": "^0.1.0",
-    "lint-staged": "^9.2.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",

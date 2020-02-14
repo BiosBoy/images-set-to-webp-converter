@@ -1,28 +1,8 @@
-import normalizedPathName from '../src/helpers/normalizedPathName'
+// import normalizedPathName from '../src/helpers/normalizedPathName'
 
+// TODO: write tests here
 describe('normalizedPathName()', () => {
-  it('should return right path instead of wrong one provided by user v1', () => {
-    // @ts-ignore
-    process.args = [0, 0, 'User/test_Folder']
-
-    expect(normalizedPathName()).toBe('/usr/local/bin/node')
-  })
-  it('should return right path instead of wrong one provided by user v2', () => {
-    // @ts-ignore
-    process.args = [0, 0, '/User/test_Folder']
-
-    expect(normalizedPathName()).toBe('/usr/local/bin/node')
-  })
-  it('should return right path instead of wrong one provided by user v3', () => {
-    // @ts-ignore
-    process.args = [0, 0, 'User/test_Folder/']
-
-    expect(normalizedPathName()).toBe('/usr/local/bin/node')
-  })
-  it('should return right path instead of wrong one provided by user v4', () => {
-    // @ts-ignore
-    process.args = [0, 0, '/User/test_Folder/']
-
-    expect(normalizedPathName()).toBe('/usr/local/bin/node')
+  it('should return error in case of wrong or missed path', () => {
+    // expect(normalizedPathName()).toThrow()
   })
 })

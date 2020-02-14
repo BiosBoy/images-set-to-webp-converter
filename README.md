@@ -31,7 +31,7 @@ Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
                                                              | --- img@2x.jpg `
 
 3. Run `images-set-to-webp-converter` util in a way like:
-     `yarn images-set-to-webp-converter /Desktop/IMGSet`
+     `yarn images-set-to-webp-converter path=/Desktop/IMGSet`
 
 4. Grab your **.webp** right on here:
 
@@ -57,4 +57,4 @@ Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
 1. **How can I tune the quality/compression of produced image?**
 
 -   Well, it's a bit easy. Just add a number value right after you add the path of the folder to proccess.
-Example: `yarn images-set-to-webp-converter /Desktop/IMGSet 65`.
+Example: `yarn images-set-to-webp-converter path=/Desktop/IMGSet quality=65`.

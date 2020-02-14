@@ -27,7 +27,7 @@
   "homepage": "https://github.com/BiosBoy/images-set-to-webp-converter",
   "main": "lib/lib-min.js",
   "bin": {
-    "repackerjs": "./bin/cli.ts"
+    "images-set-to-webp-converter": "./bin/cli.ts"
   },
   "husky": {
     "hooks": {

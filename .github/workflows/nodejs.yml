@@ -24,7 +24,7 @@ jobs:
         tag_name: "v%s"
         tag_message: "v%s"
         commit_pattern: "^Release (\\S+)"
-      
+       
     env:
       NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       CI: true

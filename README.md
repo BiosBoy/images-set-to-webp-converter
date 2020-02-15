@@ -14,9 +14,9 @@ Builded on top of the well versed webp util https://www.npmjs.com/package/cwebp!
 **Quick Start:**
 
  1. Install the plugin globally or inside your working dir by:
-      `npm install images-set-to-webp-converter`
+      `npm install -g images-set-to-webp-converter`
       or
-      `yarn add images-set-to-webp-converter`
+      `yarn add images-set-to-webp-converter -g`
  2. Prepare some images set inside particular folder, generated previously by Abode Images Processor Pro plugin, like:
 
           Desktop --- |

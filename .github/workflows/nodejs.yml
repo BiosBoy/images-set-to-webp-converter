@@ -17,7 +17,7 @@ jobs:
     - run: npm install
     - run: npm run compile --if-present
     - run: npm run test:all
-    - run: npm publish --access public
+    - run: npm publish
     - name: Publish to npm if version has been updated
       uses: pascalgn/npm-publish-action@1.1.0
       with:
